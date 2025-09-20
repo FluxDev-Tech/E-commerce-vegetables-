@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Fresh Harvest PH</title>
+    <meta name="description" content="Complete your order - secure checkout process">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🌱</span>
+                Fresh Harvest PH
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="#categories" class="nav-link">Categories</a></li>
+                <li><a href="products.html" class="nav-link">Products</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="search-btn" id="search-btn" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                
+                <button class="auth-btn" id="auth-btn">Login</button>
+                
+                <button class="cart-icon" id="cart-btn" aria-label="Shopping Cart">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="m1 1 4 4 14 1-1 5H5.95"></path>
+                    </svg>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+                
+                <button class="mobile-menu" id="mobile-menu" aria-label="Menu">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <nav class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <a href="cart.html">Cart</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <span>Checkout</span>
+                </nav>
+                <h1 class="page-title">Secure Checkout</h1>
+                
+                <!-- Progress Steps -->
+                <div class="checkout-progress">
+                    <div class="progress-step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Shipping</div>
+                    </div>
+                    <div class="progress-step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Payment</div>
+                    </div>
+                    <div class="progress-step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Review</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Checkout Content -->
+        <section class="checkout-section">
+            <div class="container">
+                <div class="checkout-layout">
+                    <!-- Checkout Form -->
+                    <div class="checkout-main">
+                        <form class="checkout-form" id="checkout-form">
+                            <!-- Step 1: Shipping Information -->
+                            <div class="checkout-step active" id="step-1">
+                                <h2 class="step-title">Shipping Information</h2>
+                                
+                                <!-- Customer Information -->
+                                <div class="form-section">
+                                    <h3>Contact Information</h3>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="first-name">First Name *</label>
+                                            <input type="text" id="first-name" name="firstName" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="last-name">Last Name *</label>
+                                            <input type="text" id="last-name" name="lastName" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="email">Email Address *</label>
+                                            <input type="email" id="email" name="email" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phone">Phone Number *</label>
+                                            <input type="tel" id="phone" name="phone" required placeholder="+63 912 345 6789">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Shipping Address -->
+                                <div class="form-section">
+                                    <h3>Shipping Address</h3>
+                                    <div class="form-group">
+                                        <label for="address">Street Address *</label>
+                                        <input type="text" id="address" name="address" required placeholder="House/Unit No., Street Name">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="address2">Apartment, Suite, etc.</label>
+                                        <input type="text" id="address2" name="address2" placeholder="Apartment, suite, unit, building, floor, etc.">
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="city">City *</label>
+                                            <select id="city" name="city" required>
+                                                <option value="">Select City</option>
+                                                <option value="manila">Manila</option>
+                                                <option value="quezon-city">Quezon City</option>
+                                                <option value="makati">Makati</option>
+                                                <option value="pasig">Pasig</option>
+                                                <option value="taguig">Taguig</option>
+                                                <option value="mandaluyong">Mandaluyong</option>
+                                                <option value="pasay">Pasay</option>
+                                                <option value="paranaque">Parañaque</option>
+                                                <option value="las-pinas">Las Piñas</option>
+                                                <option value="muntinlupa">Muntinlupa</option>
+                                                <option value="marikina">Marikina</option>
+                                                <option value="valenzuela">Valenzuela</option>
+                                                <option value="caloocan">Caloocan</option>
+                                                <option value="malabon">Malabon</option>
+                                                <option value="navotas">Navotas</option>
+                                                <option value="san-juan">San Juan</option>
+                                                <option value="cebu-city">Cebu City</option>
+                                                <option value="davao-city">Davao City</option>
+                                                <option value="baguio">Baguio</option>
+                                                <option value="iloilo">Iloilo</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="province">Province *</label>
+                                            <select id="province" name="province" required>
+                                                <option value="">Select Province</option>
+                                                <option value="metro-manila">Metro Manila</option>
+                                                <option value="cebu">Cebu</option>
+                                                <option value="davao-del-sur">Davao del Sur</option>
+                                                <option value="benguet">Benguet</option>
+                                                <option value="iloilo">Iloilo</option>
+                                                <option value="laguna">Laguna</option>
+                                                <option value="cavite">Cavite</option>
+                                                <option value="rizal">Rizal</option>
+                                                <option value="bulacan">Bulacan</option>
+                                                <option value="pampanga">Pampanga</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="postal-code">Postal Code *</label>
+                                            <input type="text" id="postal-code" name="postalCode" required placeholder="1000">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="country">Country</label>
+                                            <input type="text" id="country" name="country" value="Philippines" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Shipping Options -->
+                                <div class="form-section">
+                                    <h3>Shipping Method</h3>
+                                    <div class="shipping-options">
+                                        <label class="shipping-option">
+                                            <input type="radio" name="shipping" value="standard" checked>
+                                            <div class="shipping-info">
+                                                <div class="shipping-details">
+                                                    <span class="shipping-name">Standard Delivery</span>
+                                                    <span class="shipping-time">3-5 business days</span>
+                                                </div>
+                                                <span class="shipping-price">₱50.00</span>
+                                            </div>
+                                        </label>
+                                        
+                                        <label class="shipping-option">
+                                            <input type="radio" name="shipping" value="express">
+                                            <div class="shipping-info">
+                                                <div class="shipping-details">
+                                                    <span class="shipping-name">Express Delivery</span>
+                                                    <span class="shipping-time">1-2 business days</span>
+                                                </div>
+                                                <span class="shipping-price">₱120.00</span>
+                                            </div>
+                                        </label>
+                                        
+                                        <label class="shipping-option">
+                                            <input type="radio" name="shipping" value="same-day">
+                                            <div class="shipping-info">
+                                                <div class="shipping-details">
+                                                    <span class="shipping-name">Same Day Delivery</span>
+                                                    <span class="shipping-time">Metro Manila only</span>
+                                                </div>
+                                                <span class="shipping-price">₱200.00</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="step-actions">
+                                    <button type="button" class="btn-primary" onclick="nextStep(2)">Continue to Payment</button>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: Payment Information -->
+                            <div class="checkout-step" id="step-2">
+                                <h2 class="step-title">Payment Information</h2>
+                                
+                                <!-- Payment Methods -->
+                                <div class="form-section">
+                                    <h3>Payment Method</h3>
+                                    <div class="payment-methods">
+                                        <label class="payment-method">
+                                            <input type="radio" name="payment" value="credit-card" checked>
+                                            <div class="payment-info">
+                                                <span class="payment-name">Credit/Debit Card</span>
+                                                <div class="payment-icons">💳</div>
+                                            </div>
+                                        </label>
+                                        
+                                        <label class="payment-method">
+                                            <input type="radio" name="payment" value="gcash">
+                                            <div class="payment-info">
+                                                <span class="payment-name">GCash</span>
+                                                <div class="payment-icons">📱</div>
+                                            </div>
+                                        </label>
+                                        
+                                        <label class="payment-method">
+                                            <input type="radio" name="payment" value="paymaya">
+                                            <div class="payment-info">
+                                                <span class="payment-name">PayMaya</span>
+                                                <div class="payment-icons">💰</div>
+                                            </div>
+                                        </label>
+                                        
+                                        <label class="payment-method">
+                                            <input type="radio" name="payment" value="cod">
+                                            <div class="payment-info">
+                                                <span class="payment-name">Cash on Delivery</span>
+                                                <div class="payment-icons">💵</div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Credit Card Details -->
+                                <div class="form-section" id="credit-card-details">
+                                    <h3>Card Details</h3>
+                                    <div class="form-group">
+                                        <label for="card-number">Card Number *</label>
+                                        <input type="text" id="card-number" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="expiry">Expiry Date *</label>
+                                            <input type="text" id="expiry" name="expiry" placeholder="MM/YY" maxlength="5">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cvv">CVV *</label>
+                                            <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="card-name">Name on Card *</label>
+                                        <input type="text" id="card-name" name="cardName" placeholder="John Dela Cruz">
+                                    </div>
+                                </div>
+
+                                <!-- Billing Address -->
+                                <div class="form-section">
+                                    <div class="form-group checkbox-group">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" id="same-as-shipping" name="sameAsShipping" checked>
+                                            <span class="checkmark"></span>
+                                            Billing address same as shipping address
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="step-actions">
+                                    <button type="button" class="btn-secondary" onclick="prevStep(1)">Back to Shipping</button>
+                                    <button type="button" class="btn-primary" onclick="nextStep(3)">Review Order</button>
+                                </div>
+                            </div>
+
+                            <!-- Step 3: Order Review -->
+                            <div class="checkout-step" id="step-3">
+                                <h2 class="step-title">Review Your Order</h2>
+                                
+                                <!-- Order Items Review -->
+                                <div class="form-section">
+                                    <h3>Order Items</h3>
+                                    <div class="order-review-items" id="order-review-items">
+                                        <!-- Items will be loaded dynamically -->
+                                    </div>
+                                </div>
+
+                                <!-- Shipping & Payment Review -->
+                                <div class="form-section">
+                                    <div class="review-grid">
+                                        <div class="review-section">
+                                            <h3>Shipping Address</h3>
+                                            <div id="shipping-review" class="review-content">
+                                                <!-- Shipping details will be populated -->
+                                            </div>
+                                            <button type="button" class="edit-btn" onclick="prevStep(1)">Edit</button>
+                                        </div>
+                                        
+                                        <div class="review-section">
+                                            <h3>Payment Method</h3>
+                                            <div id="payment-review" class="review-content">
+                                                <!-- Payment details will be populated -->
+                                            </div>
+                                            <button type="button" class="edit-btn" onclick="prevStep(2)">Edit</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Terms and Conditions -->
+                                <div class="form-section">
+                                    <div class="form-group checkbox-group">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" id="terms-agreement" name="termsAgreement" required>
+                                            <span class="checkmark"></span>
+                                            I agree to the <a href="#terms" target="_blank">Terms and Conditions</a> and <a href="#privacy" target="_blank">Privacy Policy</a>
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-group checkbox-group">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" id="newsletter-signup" name="newsletterSignup">
+                                            <span class="checkmark"></span>
+                                            Subscribe to our newsletter for updates and special offers
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="step-actions">
+                                    <button type="button" class="btn-secondary" onclick="prevStep(2)">Back to Payment</button>
+                                    <button type="submit" class="btn-primary checkout-submit">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M9 11l3 3l8-8"></path>
+                                            <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
+                                        </svg>
+                                        Place Order
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Order Summary Sidebar -->
+                    <aside class="checkout-sidebar">
+                        <div class="summary-card">
+                            <h3>Order Summary</h3>
+                            
+                            <div class="order-items-summary" id="order-items-summary">
+                                <!-- Order items will be loaded dynamically -->
+                            </div>
+                            
+                            <div class="summary-calculations">
+                                <div class="summary-row">
+                                    <span>Subtotal:</span>
+                                    <span id="checkout-subtotal">₱0.00</span>
+                                </div>
+                                
+                                <div class="summary-row">
+                                    <span>Shipping:</span>
+                                    <span id="checkout-shipping">₱50.00</span>
+                                </div>
+                                
+                                <div class="summary-row">
+                                    <span>Tax:</span>
+                                    <span id="checkout-tax">₱0.00</span>
+                                </div>
+                                
+                                <div class="summary-row discount-row" id="discount-row" style="display: none;">
+                                    <span>Discount:</span>
+                                    <span id="discount-amount">-₱0.00</span>
+                                </div>
+                                
+                                <div class="summary-divider"></div>
+                                
+                                <div class="summary-row total-row">
+                                    <span>Total:</span>
+                                    <span id="checkout-total">₱0.00</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Security Badges -->
+                            <div class="security-badges">
+                                <div class="security-badge">
+                                    <span class="badge-icon">🔒</span>
+                                    <span class="badge-text">SSL Encrypted</span>
+                                </div>
+                                <div class="security-badge">
+                                    <span class="badge-icon">🛡️</span>
+                                    <span class="badge-text">Secure Payment</span>
+                                </div>
+                                <div class="security-badge">
+                                    <span class="badge-icon">💳</span>
+                                    <span class="badge-text">Multiple Payment Options</span>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fresh Harvest PH</h3>
+                    <p>Bringing fresh vegetables and authentic Filipino snacks to your doorstep across the Philippines.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#shipping">Shipping Info</a></li>
+                        <li><a href="#returns">Returns</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p>📞 +63 912 345 6789</p>
+                        <p>📧 hello@fresharvestph.com</p>
+                        <p>📍 Cayus, Pilar, Philippines</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fresh Harvest PH. All rights reserved by FlixDev.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal" id="success-modal">
+        <div class="modal-content success-content">
+            <div class="success-icon">✅</div>
+            <h3>Order Placed Successfully!</h3>
+            <p>Thank you for your order. We'll send you a confirmation email shortly.</p>
+            <div class="order-number">
+                Order #: <span id="order-number">FH2025001</span>
+            </div>
+            <div class="modal-actions">
+                <a href="index.html" class="btn-secondary">Continue Shopping</a>
+                <button class="btn-primary" onclick="viewOrderDetails()">View Order Details</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script src="checkout.js"></script>
+</body>
+</html>

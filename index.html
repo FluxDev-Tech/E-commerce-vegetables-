@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Harvest PH - Fresh Vegetables & Local Snacks</title>
+    <meta name="description" content="Fresh vegetables and authentic Filipino snacks delivered to your doorstep across the Philippines">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🌱</span>
+                Fresh Harvest PH
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="#categories" class="nav-link">Categories</a></li>
+                <li><a href="products.html" class="nav-link">Products</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="search-btn" id="search-btn" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                
+                <button class="auth-btn" id="auth-btn">Login</button>
+                
+                <button class="cart-icon" id="cart-btn" aria-label="Shopping Cart">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="m1 1 4 4 14 1-1 5H5.95"></path>
+                    </svg>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+                
+                <button class="mobile-menu" id="mobile-menu" aria-label="Menu">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Search Modal -->
+        <div class="search-modal" id="search-modal">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search for products..." id="search-input">
+                <button class="search-close" id="search-close">&times;</button>
+            </div>
+            <div class="search-results" id="search-results"></div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Fresh <span class="highlight">Vegetables</span> & 
+                        Authentic <span class="highlight">Filipino Snacks</span>
+                    </h1>
+                    <p class="hero-description">
+                        Delivering the freshest produce and beloved local snacks straight to your doorstep across the Philippines. 
+                        Supporting local farmers and artisans while bringing quality to your table.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#categories" class="cta-button primary">Shop Now</a>
+                        <a href="#featured" class="cta-button secondary">View Featured</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="floating-card" style="top: 20%; left: 10%;">
+                        <span class="product-emoji">🥬</span>
+                        <span class="product-name">Fresh Lettuce</span>
+                    </div>
+                    <div class="floating-card" style="top: 40%; right: 15%;">
+                        <span class="product-emoji">🍌</span>
+                        <span class="product-name">Saba Banana</span>
+                    </div>
+                    <div class="floating-card" style="bottom: 30%; left: 20%;">
+                        <span class="product-emoji">🥭</span>
+                        <span class="product-name">Philippine Mango</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Categories -->
+        <section class="categories" id="categories">
+            <div class="container">
+                <h2 class="section-title">Product Categories</h2>
+                <p class="section-subtitle">Discover our fresh selection of vegetables and authentic Filipino snacks</p>
+                
+                <div class="category-grid">
+                    <div class="category-card" data-category="vegetables">
+                        <div class="category-icon">🥬</div>
+                        <h3>Fresh Vegetables</h3>
+                        <p>Farm-fresh vegetables sourced directly from local farmers across the Philippines</p>
+                        <div class="category-items">
+                            <span class="item-tag">Leafy Greens</span>
+                            <span class="item-tag">Root Vegetables</span>
+                            <span class="item-tag">Herbs</span>
+                        </div>
+                        <button class="category-btn">Explore Vegetables</button>
+                    </div>
+                    
+                    <div class="category-card" data-category="snacks">
+                        <div class="category-icon">🍘</div>
+                        <h3>Filipino Snacks</h3>
+                        <p>Authentic local delicacies and traditional Filipino snacks made with love</p>
+                        <div class="category-items">
+                            <span class="item-tag">Rice Cakes</span>
+                            <span class="item-tag">Dried Fruits</span>
+                            <span class="item-tag">Pastries</span>
+                        </div>
+                        <button class="category-btn">Explore Snacks</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="featured" id="featured">
+            <div class="container">
+                <h2 class="section-title">Featured Products</h2>
+                <p class="section-subtitle">Best-selling and seasonal items handpicked for you</p>
+                
+                <div class="product-filters">
+                    <button class="filter-btn active" data-filter="all">All Products</button>
+                    <button class="filter-btn" data-filter="vegetables">Vegetables</button>
+                    <button class="filter-btn" data-filter="snacks">Snacks</button>
+                    <button class="filter-btn" data-filter="seasonal">Seasonal</button>
+                </div>
+                
+                <div class="product-grid" id="featured-products">
+                    <!-- Products will be loaded dynamically via JavaScript -->
+                </div>
+                
+                <div class="load-more-container">
+                    <button class="load-more-btn" id="load-more">View All Products</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials" id="testimonials">
+            <div class="container">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="section-subtitle">Real reviews from satisfied customers across the Philippines</p>
+                
+                <div class="testimonials-slider">
+                    <div class="testimonial-track" id="testimonial-track">
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <p class="testimonial-text">
+                                "The vegetables are always fresh and delivered quickly! Love supporting local farmers through this platform."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">M</div>
+                                <div class="author-info">
+                                    <h4>Maria Santos</h4>
+                                    <span>Manila, Philippines</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <p class="testimonial-text">
+                                "Finally found authentic Filipino snacks online! The kakanin selection is amazing and tastes just like home."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">J</div>
+                                <div class="author-info">
+                                    <h4>Juan Dela Cruz</h4>
+                                    <span>Cebu, Philippines</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <p class="testimonial-text">
+                                "Great quality products and excellent customer service. Delivery to Davao was faster than expected!"
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">A</div>
+                                <div class="author-info">
+                                    <h4>Ana Rodriguez</h4>
+                                    <span>Davao, Philippines</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <p class="testimonial-text">
+                                "Love the variety of vegetables available. Perfect for my family's healthy eating goals!"
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">R</div>
+                                <div class="author-info">
+                                    <h4>Roberto Fernandez</h4>
+                                    <span>Baguio, Philippines</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonials-nav">
+                        <button class="nav-btn prev" id="prev-testimonial">‹</button>
+                        <button class="nav-btn next" id="next-testimonial">›</button>
+                    </div>
+                </div>
+                
+                <div class="trust-badges">
+                    <div class="badge">
+                        <span class="badge-icon">🚚</span>
+                        <span class="badge-text">Free Delivery Metro Manila</span>
+                    </div>
+                    <div class="badge">
+                        <span class="badge-icon">🌱</span>
+                        <span class="badge-text">Fresh Guarantee</span>
+                    </div>
+                    <div class="badge">
+                        <span class="badge-icon">🇵🇭</span>
+                        <span class="badge-text">Proudly Filipino</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Stay Fresh with Our Updates</h2>
+                    <p>Get notified about new products, seasonal offers, and exclusive deals</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fresh Harvest PH</h3>
+                    <p>Bringing fresh vegetables and authentic Filipino snacks to your doorstep across the Philippines.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#shipping">Shipping Info</a></li>
+                        <li><a href="#returns">Returns</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p>📞 +63 912 345 6789</p>
+                        <p>📧 hello@fresharvestph.com</p>
+                        <p>📍 Cayus, Pilar, Philippines</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fresh Harvest PH. All rights reserved by FluxDev.</p>
+                <div class="footer-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login/Register Modal -->
+    <div class="modal" id="auth-modal">
+        <div class="modal-content">
+            <span class="modal-close" id="modal-close">&times;</span>
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Login</button>
+                <button class="auth-tab" data-tab="register">Register</button>
+            </div>
+            
+            <div class="auth-form" id="login-form">
+                <h3>Welcome Back</h3>
+                <form>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit" class="auth-submit">Login</button>
+                </form>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+            
+            <div class="auth-form" id="register-form" style="display: none;">
+                <h3>Create Account</h3>
+                <form>
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Confirm Password" required>
+                    <button type="submit" class="auth-submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" id="cart-close">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer" id="cart-footer" style="display: none;">
+            <div class="cart-total">
+                <span>Total: ₱<span id="cart-total">0.00</span></span>
+            </div>
+            <div class="cart-actions">
+                <a href="cart.html" class="btn-secondary">View Cart</a>
+                <a href="checkout.html" class="btn-primary">Checkout</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
